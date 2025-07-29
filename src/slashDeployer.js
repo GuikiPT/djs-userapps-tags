@@ -65,7 +65,7 @@ async function deploySlashCommands() {
                 console.log(colors.yellow('Invalid action specified.'))
         }
     } catch (error) {
-        logError('Error during Slash Command Deployment:', error);
+        console.error('Error during Slash Command Deployment:', error);
     } finally {
         console.log(colors.yellow('Shutting down Slash Command Deployment System gracefully...'));
         await client.destroy();

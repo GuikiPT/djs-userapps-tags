@@ -41,7 +41,7 @@ async function executeSlashCommand(command, interaction) {
     const sub = interaction.options.getSubcommand();
     const skipDefer = interaction.commandName === 'tag' && sub === 'create';
     if (!skipDefer) {
-        await interaction.deferReply({ flags: MessageFlags.Ephemeral });
+        await interaction.deferReply();
     }
 
     try {
